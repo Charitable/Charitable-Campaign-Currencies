@@ -1,0 +1,42 @@
+{
+    "name": "wpcharitable/charitable-campaign-currencies",
+    "description": "Charitable Currencies per Campaign",
+    "keywords": [
+		"wordpress",
+		"wpcharitable"
+	],
+    "homepage": "https://www.wpcharitable.com/",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+		{
+			"name": "WP Charitable",
+			"homepage": "https://www.wpcharitable.com"
+		}
+	],
+    "support": {
+		"email": "support@wpcharitable.com",
+		"issues": "https://github.com/Charitable/Charitable-Plugin-Scaffolder/issues",
+		"source": "https://github.com/Charitable/Charitable-Plugin-Scaffolder"
+	},
+    "autoload": {
+		"psr-4": {
+			"Charitable\\Pro\\CurrenciesPerCampaign\\": "src/"
+		}
+	},
+    "require": {
+        "wpcharitable/charitable-extension-activation": "^1.1",
+		"league/container": "^3.3"
+    },
+    "require-dev": {
+        "wp-cli/i18n-command": "2.2.9"
+    },
+    "scripts": {
+        "makepot-audit": [
+            "wp --allow-root i18n make-pot . --exclude=\"bin,node_modules,tests,vendor\" --slug=charitable-campaign-currencies"
+        ],
+        "makepot": [
+            "@makepot-audit --skip-audit"
+        ]
+    }
+}

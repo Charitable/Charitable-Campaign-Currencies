@@ -1,0 +1,16 @@
+{
+	"name": "charitable-campaign-currencies",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "wp-scripts start",
+		"build": "wp-scripts build && ./bin/build-zip.sh $npm_package_version",
+		"build:core": "npm run makepot",
+		"makepot": "composer run-script makepot",
+		"build:zip": "composer install && npm run build:core && npm run build",
+		"check-engines": "wp-scripts check-engines",
+		"version-bump": "./bin/version-changes.sh"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^18.1.0"
+	}
+}

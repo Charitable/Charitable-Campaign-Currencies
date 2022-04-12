@@ -1,0 +1,11 @@
+.distignore
+.gitignore
+.DS_Store
+assets
+bin
+build
+composer.json
+node_modules
+package.json
+releases
+webpack.config.js
